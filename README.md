@@ -18,3 +18,13 @@ kubectl argo rollouts version
 ```shell
 kubectl argo rollouts dashboard
 ```
+
+
+```shell
+kubectl argo rollouts get rollout rollout-bluegreen
+kubectl argo rollouts set image rollout-bluegreen rollouts-demo=argoproj/rollouts-demo:green
+kubectl argo rollouts get rollout rollout-bluegreen
+kubectl argo rollouts promote rollout-bluegreen
+kubectl argo rollouts get rollout rollout-bluegreen
+
+```
